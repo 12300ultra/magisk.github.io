@@ -40,6 +40,60 @@
 		}
 	</style>
 <style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		button {
+			font-size: 16px;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		.popup {
+			background-color: rgba(0, 0, 0, 0.8);
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: none;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.popup-content {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			text-align: center;
+		}
+		
+		.close-btn {
+			font-size: 16px;
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		@media (max-width: 768px) {
+		
+			.popup-content {
+				width: 90%;
+			}
+		
+		}
+	</style>	
+<style>
 * {
     box-sizing: border-box;
 }
@@ -160,17 +214,38 @@ body {
   <div class="side">
       <h2>关于</h2>
       <h5>介绍</h5>
-      <div class="fakeimg" style="height:200px;">本站最终解释权归作者所有，开发不易，请支持正版。作者 龖 邮箱:3569419105@qq.com
-		<li><a href="https://myself1.rth1.link/">个人主页 龖</a></li>
+      <div class="fakeimg" style="height:300px;"><button onclick="openPopup()">相关信息</button>
+
+	<div id="popup" class="popup">
+		<div class="popup-content">
+			<h2>本网站创立于2022年，至今仍在不断更新</h2>
+                        <p>作者：龖 
+			<p>联系作者：3569419105@qq.com</p>
+			<p>本站最终解释权归作者 龖 所有
+
+			
+			<button class="close-btn" onclick="closePopup()">关闭</button>
+		</div>
+	</div>
+
+	<script>
+		function openPopup() {
+			document.getElementById('popup').style.display = 'flex';
+		}
+		
+		function closePopup() {
+			document.getElementById('popup').style.display = 'none';
+		}
+	</script>
 		
 
 	  </div>
       <p>最新永久网址：https://12300ultra.github.io/magisk.github.io/</p>
       <h3>更多内容</h3>
       <p>网站信息</p>
-      <div class="fakeimg" style="height:60px;">版本：2.1.3</div><br>
+      <div class="fakeimg" style="height:60px;">版本：2.1.5</div><br>
       <div class="fakeimg" style="height:70px;">公告：原网址已永久停止更新，请更新收藏夹</div><br>
-      <div class="fakeimg" style="height:100px;">更新日志（2024年新版本）：新增3个实用网站链接
+      <div class="fakeimg" style="height:100px;">更新日志（2024新春版本）：介绍内容改版
 </div>
 </div>
   <div class="main">
@@ -226,7 +301,7 @@ body {
 </div>
 
 <div class="footer">
-  <h2>&copy; 2023 - 万能百宝箱</h2>
+  <h2>&copy; 2024 - 万能百宝箱</h2>
 </div>
 <div id="popup">
 		<p>欢迎访问万能百宝箱！</p>
